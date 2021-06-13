@@ -13,6 +13,7 @@
 		B69E2C952675C7F300B0BAE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69E2C942675C7F300B0BAE2 /* Preview Assets.xcassets */; };
 		B69E2CA02675C7F400B0BAE2 /* GotNextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E2C9F2675C7F400B0BAE2 /* GotNextTests.swift */; };
 		B69E2CAB2675C7F400B0BAE2 /* GotNextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E2CAA2675C7F400B0BAE2 /* GotNextUITests.swift */; };
+		B69E2CBC2675C8FF00B0BAE2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E2CBB2675C8FF00B0BAE2 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		B69E2CA62675C7F400B0BAE2 /* GotNextUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GotNextUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69E2CAA2675C7F400B0BAE2 /* GotNextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotNextUITests.swift; sourceTree = "<group>"; };
 		B69E2CAC2675C7F400B0BAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B69E2CBB2675C8FF00B0BAE2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				B69E2C912675C7F300B0BAE2 /* Assets.xcassets */,
 				B69E2C962675C7F300B0BAE2 /* Info.plist */,
 				B69E2C932675C7F300B0BAE2 /* Preview Content */,
+				B69E2CBB2675C8FF00B0BAE2 /* HomeView.swift */,
 			);
 			path = GotNext;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69E2CBC2675C8FF00B0BAE2 /* HomeView.swift in Sources */,
 				B69E2C902675C7ED00B0BAE2 /* ContentView.swift in Sources */,
 				B69E2C8E2675C7ED00B0BAE2 /* GotNextApp.swift in Sources */,
 			);
