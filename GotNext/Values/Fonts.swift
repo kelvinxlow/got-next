@@ -9,6 +9,8 @@ import Foundation
 import SwiftUI
 
 enum Fonts: CGFloat {
+    case subHeader = 12
+    case header = 16
     case subTitle = 24
     case title = 32
 }

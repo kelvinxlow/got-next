@@ -18,6 +18,7 @@ struct EventView: View {
                 .resizable()
                 .frame(width: Sizes.imageSideLength.rawValue, height: Sizes.imageSideLength.rawValue)
                 .padding(Spacings.medium.rawValue)
+            
             VStack(alignment: .leading) {
                 Text("Saturday, Sep 25th @ 12:37 PM")
                     .lineLimit(1)
@@ -26,9 +27,9 @@ struct EventView: View {
                 Text("Descriptions for the event which may run multiple lines ")
                     .lineLimit(1)
             }
+            
             Spacer()
-        }
-        .padding(Spacings.medium.rawValue)
+        }.padding(Spacings.medium.rawValue)
         .frame(alignment: .center)
         .background(Color("BackgroundPurple"))
         .cornerRadius(Values.cornerRadius.rawValue)
