@@ -37,15 +37,13 @@ struct HomeView: View {
                     Text("ACTIVE EVENTS")
                         .font(.system(size: Fonts.subTitle.rawValue, weight: .bold, design: .serif))
                         .foregroundColor(.black)
-                }.padding(.top, Spacings.medium
-                            .rawValue)
+                }.padding(.top, Spacings.medium.rawValue)
                 
-                    ScrollView() {
+                ScrollView() {
                     EventView()
                     EventView()
                     EventView()
-                }
-                .padding(Spacings.large.rawValue)
+                }.padding(Spacings.large.rawValue)
             }
             
             HStack() {
@@ -56,8 +54,7 @@ struct HomeView: View {
                 Text("UPCOMING EVENTS")
                     .font(.system(size: Fonts.subTitle.rawValue, weight: .bold, design: .serif))
                     .foregroundColor(.black)
-            }.padding(.top, Spacings.medium
-                        .rawValue)
+            }.padding(.top, Spacings.medium.rawValue)
             
             // add something that shows events when they are available
             if (true) {
@@ -70,7 +67,6 @@ struct HomeView: View {
                 EmptyView()
                 Spacer()
             }
-            
             
             Divider()
             HStack() {

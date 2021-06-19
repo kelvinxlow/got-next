@@ -15,8 +15,7 @@ struct EmptyView: View {
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color.black.opacity(0.7))
                 .frame(width: 200)
-        }
-        .padding(Spacings.huge.rawValue)
+        }.padding(Spacings.huge.rawValue)
         .frame(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
         .background(Color.gray.opacity(0.3))
         .cornerRadius(Values.cornerRadius.rawValue)
