@@ -10,5 +10,6 @@ import SwiftUI
 
 enum Values: CGFloat {
     case cornerRadius = 25
+    case smallCornerRadius = 15
 }
 
