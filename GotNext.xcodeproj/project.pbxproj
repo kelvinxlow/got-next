@@ -23,6 +23,8 @@
 		B69E2CA02675C7F400B0BAE2 /* GotNextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E2C9F2675C7F400B0BAE2 /* GotNextTests.swift */; };
 		B69E2CAB2675C7F400B0BAE2 /* GotNextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E2CAA2675C7F400B0BAE2 /* GotNextUITests.swift */; };
 		B69E2CBC2675C8FF00B0BAE2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E2CBB2675C8FF00B0BAE2 /* HomeView.swift */; };
+		B6BE78BB26B6285D00A01E9A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE78BA26B6285D00A01E9A /* Strings.swift */; };
+		B6BE78C026B62A1100A01E9A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE78BF26B62A1100A01E9A /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		B69E2CAA2675C7F400B0BAE2 /* GotNextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotNextUITests.swift; sourceTree = "<group>"; };
 		B69E2CAC2675C7F400B0BAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B69E2CBB2675C8FF00B0BAE2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B6BE78BA26B6285D00A01E9A /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		B6BE78BF26B62A1100A01E9A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				B671E58E2676B7220042CCE6 /* Spacings.swift */,
 				B671E5B1267984BD0042CCE6 /* Fonts.swift */,
 				B671E5B926798C450042CCE6 /* Values.swift */,
+				B6BE78BA26B6285D00A01E9A /* Strings.swift */,
+				B6BE78BF26B62A1100A01E9A /* Colors.swift */,
 			);
 			path = Values;
 			sourceTree = "<group>";
@@ -332,10 +338,12 @@
 				B69E2CBC2675C8FF00B0BAE2 /* HomeView.swift in Sources */,
 				B671E5D4267ADAA20042CCE6 /* MapView.swift in Sources */,
 				B671E58F2676B7220042CCE6 /* Spacings.swift in Sources */,
+				B6BE78C026B62A1100A01E9A /* Colors.swift in Sources */,
 				B671E5CF267AD22F0042CCE6 /* GroupMembersView.swift in Sources */,
 				B671E5B2267984BD0042CCE6 /* Fonts.swift in Sources */,
 				B69E2C902675C7ED00B0BAE2 /* ContentView.swift in Sources */,
 				B671E5E3267D706F0042CCE6 /* LoginView.swift in Sources */,
+				B6BE78BB26B6285D00A01E9A /* Strings.swift in Sources */,
 				B69E2C8E2675C7ED00B0BAE2 /* GotNextApp.swift in Sources */,
 				B671E5C7267990FC0042CCE6 /* GroupEventView.swift in Sources */,
 				B671E5AD267984130042CCE6 /* EmptyView.swift in Sources */,
