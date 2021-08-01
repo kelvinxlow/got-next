@@ -24,14 +24,14 @@ struct EventView: View {
                     .lineLimit(1)
                 Text("Fictional Central Park")
                     .lineLimit(1)
-                Text("Descriptions for the event which may run multiple lines ")
+                Text("Descriptions for the event which may run multiple lines")
                     .lineLimit(1)
             }
             
             Spacer()
         }.padding(Spacings.medium.rawValue)
         .frame(alignment: .center)
-        .background(Color("BackgroundPurple"))
+        .background(Color(Colors.backgroundPurple))
         .cornerRadius(Values.cornerRadius.rawValue)
         .padding(.bottom, Spacings.small.rawValue)
     }

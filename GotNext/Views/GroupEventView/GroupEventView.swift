@@ -51,17 +51,17 @@ struct GroupEventView: View {
             
             HStack(spacing: Spacings.huge.rawValue) {
                 Button(action: { print("Confirmed") }) {
-                    Text("Accept")
+                    Text(Strings.accept)
                         .font(.system(size: Fonts.title.rawValue, weight: .medium, design: .serif))
                         .lineLimit(1)
-                        .foregroundColor(Color("OutlineGreen"))
+                        .foregroundColor(Color(Colors.outlineGreen))
                         .padding(Spacings.large.rawValue)
                         .frame(width: Sizes.buttonwidth.rawValue, height: Sizes.buttonHeight.rawValue)
-                        .border(Color("OutlineGreen"), width: Sizes.borderWidth.rawValue)
+                        .border(Color(Colors.outlineGreen), width: Sizes.borderWidth.rawValue)
                 }
                 
                 Button(action: { print("Denied") }) {
-                    Text("Decline")
+                    Text(Strings.decline)
                         .font(.system(size: Fonts.title.rawValue, weight: .medium, design: .serif))
                         .lineLimit(1)
                         .foregroundColor(Color.red)
