@@ -11,7 +11,7 @@ struct LoginView: View {
     var body: some View {
         ZStack() {
             LinearGradient(gradient:
-                            Gradient(colors: [Color(Colors.featurePurple).opacity(0.5), Color.black.opacity(0.7)]),
+                            Gradient(colors: [Color(Colors.backgroundPurple), Color.black.opacity(0.7)]),
                            startPoint: .top,
                            endPoint: .bottom)
                 .ignoresSafeArea()
@@ -67,7 +67,7 @@ struct LoginView: View {
                         .font(.system(size: Fonts.header.rawValue, weight: .medium, design: .serif))
                         .foregroundColor(Color.white)
                 }.padding(Spacings.medium.rawValue)
-                .background(Color(Colors.featurePurple).opacity(0.1), alignment: .center)
+                .background(Color(Colors.backgroundPurple).opacity(0.1), alignment: .center)
                 .cornerRadius(Values.cornerRadius.rawValue)
                 .padding(.top, Spacings.medium.rawValue)
                 
@@ -76,7 +76,7 @@ struct LoginView: View {
                         .font(.system(size: Fonts.header.rawValue, weight: .medium, design: .serif))
                         .foregroundColor(Color.white)
                 }.padding(Spacings.medium.rawValue)
-                .background(Color(Colors.featurePurple).opacity(0.1), alignment: .center)
+                .background(Color(Colors.backgroundPurple).opacity(0.1), alignment: .center)
                 .cornerRadius(Values.cornerRadius.rawValue)
                 
                 
