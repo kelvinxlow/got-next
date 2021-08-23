@@ -15,4 +15,5 @@ enum Spacings: CGFloat {
     case large = 12
     case extraLarge = 16
     case huge = 32
+    case enormous = 64
 }
