@@ -16,6 +16,8 @@ public class Strings {
     
     static let accept = "Accept"
     static let decline = "Decline"
+    static let confirm = "Confirm"
+    static let cancel = "Cancel"
     
     // LoginView 
     static let signIn = "Sign In"
@@ -32,4 +34,14 @@ public class Strings {
     static let loginError = "There was an error logging you in"
     static let passwordResetError = "There was an error sending the reset email"
     static let passwordResetSent = "Check your email to reset your password"
+    
+    // CreateEventView
+    static let createEvent = "Create Event"
+    static let date = "Date"
+    static let dateTime = "Date @ Time"
+    static let location = "Location"
+    static let nameAddress = "Name / Address"
+    static let description = "Description"
+    static let eventDetails = "Event Details"
+    static let people = "People Needed"
 }

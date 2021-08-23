@@ -27,6 +27,7 @@
 		B6BE78BB26B6285D00A01E9A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE78BA26B6285D00A01E9A /* Strings.swift */; };
 		B6BE78C026B62A1100A01E9A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE78BF26B62A1100A01E9A /* Colors.swift */; };
 		B6BE78D026B6365E00A01E9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6BE78CF26B6365E00A01E9A /* GoogleService-Info.plist */; };
+		B6BE7A0926D3526F00A01E9A /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE7A0826D3526F00A01E9A /* CreateEventView.swift */; };
 		D567E059BCE6173C2546FE4A /* Pods_GotNextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D0D72513C6B8AC070CB4BA /* Pods_GotNextTests.framework */; };
 		F0D38DA1C4FEFFA4F270435A /* Pods_GotNext_GotNextUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A38472DEC4971A32D3F7EB /* Pods_GotNext_GotNextUITests.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		B6BE78BA26B6285D00A01E9A /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		B6BE78BF26B62A1100A01E9A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B6BE78CF26B6365E00A01E9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B6BE7A0826D3526F00A01E9A /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
 		C4BA1C42C656E09D70BC4C55 /* Pods-GotNextTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotNextTests.release.xcconfig"; path = "Target Support Files/Pods-GotNextTests/Pods-GotNextTests.release.xcconfig"; sourceTree = "<group>"; };
 		F25474284006BBDE218CB37F /* Pods-GotNext.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotNext.release.xcconfig"; path = "Target Support Files/Pods-GotNext/Pods-GotNext.release.xcconfig"; sourceTree = "<group>"; };
 		F530D39F78AC40628A070399 /* Pods-GotNext.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotNext.debug.xcconfig"; path = "Target Support Files/Pods-GotNext/Pods-GotNext.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		B671E5892676B0930042CCE6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B6BE7A0726D3525800A01E9A /* CreateEventView */,
 				B671E5E1267D70530042CCE6 /* LoginView */,
 				B671E5C5267990D30042CCE6 /* GroupEventView */,
 				B671E5C4267990C30042CCE6 /* HomeView */,
@@ -201,6 +204,7 @@
 		B69E2C8C2675C7ED00B0BAE2 /* GotNext */ = {
 			isa = PBXGroup;
 			children = (
+				B6BE79FE26D34FBD00A01E9A /* Models */,
 				B671E58D2676B6EF0042CCE6 /* Values */,
 				B671E5892676B0930042CCE6 /* Views */,
 				B69E2C8D2675C7ED00B0BAE2 /* GotNextApp.swift */,
@@ -237,6 +241,21 @@
 				B69E2CAC2675C7F400B0BAE2 /* Info.plist */,
 			);
 			path = GotNextUITests;
+			sourceTree = "<group>";
+		};
+		B6BE79FE26D34FBD00A01E9A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6BE7A0726D3525800A01E9A /* CreateEventView */ = {
+			isa = PBXGroup;
+			children = (
+				B6BE7A0826D3526F00A01E9A /* CreateEventView.swift */,
+			);
+			path = CreateEventView;
 			sourceTree = "<group>";
 		};
 		DDB9F08640FC6946481B8A93 /* Frameworks */ = {
@@ -493,6 +512,7 @@
 				B6BE78C026B62A1100A01E9A /* Colors.swift in Sources */,
 				B671E5CF267AD22F0042CCE6 /* GroupMembersView.swift in Sources */,
 				B671E5B2267984BD0042CCE6 /* Fonts.swift in Sources */,
+				B6BE7A0926D3526F00A01E9A /* CreateEventView.swift in Sources */,
 				B69E2C902675C7ED00B0BAE2 /* ContentView.swift in Sources */,
 				B671E5E3267D706F0042CCE6 /* LoginView.swift in Sources */,
 				B6BE78BB26B6285D00A01E9A /* Strings.swift in Sources */,

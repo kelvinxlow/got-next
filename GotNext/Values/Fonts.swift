@@ -13,5 +13,6 @@ enum Fonts: CGFloat {
     case header = 16
     case subTitle = 24
     case title = 32
+    case event = 48
     case login = 64
 }
