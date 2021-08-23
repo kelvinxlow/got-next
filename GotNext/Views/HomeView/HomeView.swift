@@ -12,6 +12,8 @@ struct HomeView: View {
         case imageSideLength = 48
     }
     
+    @State private var presentingModule = false
+    
     var body: some View {
         VStack(spacing: Spacings.small.rawValue) {
             HStack() {
@@ -70,10 +72,15 @@ struct HomeView: View {
             
             Divider()
             HStack() {
-                Image(systemName: "message.circle")
-                    .resizable()
-                    .frame(width: Sizes.imageSideLength.rawValue, height: Sizes.imageSideLength.rawValue)
-                    .foregroundColor(Color(Colors.featurePurple))
+                Button(action: { presentingModule = true } ) {
+                    Image(systemName: "plus.circle")
+                            .resizable()
+                            .frame(width: Sizes.imageSideLength.rawValue, height: Sizes.imageSideLength.rawValue)
+                            .foregroundColor(Color(Colors.featurePurple))
+                }.sheet(isPresented: $presentingModule, content: {
+                    CreateEventView(presentedAsModule: self.$presentingModule)
+                })
+                
                 Spacer()
                 Image(systemName: "house.circle")
                     .resizable()
