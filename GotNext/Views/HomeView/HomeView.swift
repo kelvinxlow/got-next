@@ -86,6 +86,7 @@ struct HomeView: View {
                     .foregroundColor(Color(Colors.featurePurple))
             }.padding(.top, Spacings.small.rawValue)
         }.padding(Spacings.extraLarge.rawValue)
+        .preferredColorScheme(.light)
     }
 }
 
