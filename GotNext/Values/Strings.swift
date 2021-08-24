@@ -13,6 +13,7 @@ public class Strings {
     
     static let activeEvents = "Active Events"
     static let upcomingEvents = "Upcoming Events"
+    static let pastEvents = "Past Events"
     
     static let accept = "Accept"
     static let decline = "Decline"
