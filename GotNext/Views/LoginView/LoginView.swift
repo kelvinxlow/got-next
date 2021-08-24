@@ -91,28 +91,29 @@ struct LoginView: View {
                     if let statusText = statusView() {
                         statusText
                     }
-                    else {
-                        Divider()
+                    
+                    Divider()
+                    
+                    Group {
+                        // Create New Account Button
+                        Button(action: { createNewAccount() }) {
+                            Text(Strings.newAccount)
+                                .font(.system(size: Fonts.header.rawValue, weight: .medium, design: .serif))
+                                .foregroundColor(Color.white)
+                        }.padding(EdgeInsets(top: Spacings.medium.rawValue, leading: Spacings.enormous.rawValue, bottom: Spacings.medium.rawValue, trailing: Spacings.enormous.rawValue))
+                        .background(Color(Colors.backgroundPurple).opacity(0.1), alignment: .center)
+                        .cornerRadius(Values.cornerRadius.rawValue)
+                        .padding(.top, Spacings.medium.rawValue)
+                        
+                        // Forgot Password Button
+                        Button(action: { forgotPassword() }) {
+                            Text(Strings.forgotPassword)
+                                .font(.system(size: Fonts.header.rawValue, weight: .medium, design: .serif))
+                                .foregroundColor(Color.white)
+                        }.padding(EdgeInsets(top: Spacings.medium.rawValue, leading: Spacings.enormous.rawValue, bottom: Spacings.medium.rawValue, trailing: Spacings.enormous.rawValue))
+                        .background(Color(Colors.backgroundPurple).opacity(0.1), alignment: .center)
+                        .cornerRadius(Values.cornerRadius.rawValue)
                     }
-                    
-                    // Create New Account Button
-                    Button(action: { createNewAccount() }) {
-                        Text(Strings.newAccount)
-                            .font(.system(size: Fonts.header.rawValue, weight: .medium, design: .serif))
-                            .foregroundColor(Color.white)
-                    }.padding(EdgeInsets(top: Spacings.medium.rawValue, leading: Spacings.enormous.rawValue, bottom: Spacings.medium.rawValue, trailing: Spacings.enormous.rawValue))
-                    .background(Color(Colors.backgroundPurple).opacity(0.1), alignment: .center)
-                    .cornerRadius(Values.cornerRadius.rawValue)
-                    .padding(.top, Spacings.medium.rawValue)
-                    
-                    // Forgot Password Button
-                    Button(action: { forgotPassword() }) {
-                        Text(Strings.forgotPassword)
-                            .font(.system(size: Fonts.header.rawValue, weight: .medium, design: .serif))
-                            .foregroundColor(Color.white)
-                    }.padding(EdgeInsets(top: Spacings.medium.rawValue, leading: Spacings.enormous.rawValue, bottom: Spacings.medium.rawValue, trailing: Spacings.enormous.rawValue))
-                    .background(Color(Colors.backgroundPurple).opacity(0.1), alignment: .center)
-                    .cornerRadius(Values.cornerRadius.rawValue)
                     
                     Spacer()
                     

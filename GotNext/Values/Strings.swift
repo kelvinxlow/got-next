@@ -44,4 +44,8 @@ public class Strings {
     static let description = "Description"
     static let eventDetails = "Event Details"
     static let people = "People Needed"
+    
+    // CreateEventView Status Messages
+    static let errorMessage = "There was an error saving your event, please make sure all fields are filled"
+    static let successMessage = "Your event was successfully saved!"
 }

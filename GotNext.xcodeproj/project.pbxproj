@@ -28,6 +28,7 @@
 		B6BE78C026B62A1100A01E9A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE78BF26B62A1100A01E9A /* Colors.swift */; };
 		B6BE78D026B6365E00A01E9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6BE78CF26B6365E00A01E9A /* GoogleService-Info.plist */; };
 		B6BE7A0926D3526F00A01E9A /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE7A0826D3526F00A01E9A /* CreateEventView.swift */; };
+		B6BE7A1726D4454E00A01E9A /* FBStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE7A1626D4454E00A01E9A /* FBStrings.swift */; };
 		D567E059BCE6173C2546FE4A /* Pods_GotNextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D0D72513C6B8AC070CB4BA /* Pods_GotNextTests.framework */; };
 		F0D38DA1C4FEFFA4F270435A /* Pods_GotNext_GotNextUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A38472DEC4971A32D3F7EB /* Pods_GotNext_GotNextUITests.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		B6BE78BF26B62A1100A01E9A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B6BE78CF26B6365E00A01E9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6BE7A0826D3526F00A01E9A /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
+		B6BE7A1626D4454E00A01E9A /* FBStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBStrings.swift; sourceTree = "<group>"; };
 		C4BA1C42C656E09D70BC4C55 /* Pods-GotNextTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotNextTests.release.xcconfig"; path = "Target Support Files/Pods-GotNextTests/Pods-GotNextTests.release.xcconfig"; sourceTree = "<group>"; };
 		F25474284006BBDE218CB37F /* Pods-GotNext.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotNext.release.xcconfig"; path = "Target Support Files/Pods-GotNext/Pods-GotNext.release.xcconfig"; sourceTree = "<group>"; };
 		F530D39F78AC40628A070399 /* Pods-GotNext.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotNext.debug.xcconfig"; path = "Target Support Files/Pods-GotNext/Pods-GotNext.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				B671E5B1267984BD0042CCE6 /* Fonts.swift */,
 				B671E5B926798C450042CCE6 /* Values.swift */,
 				B6BE78BA26B6285D00A01E9A /* Strings.swift */,
+				B6BE7A1626D4454E00A01E9A /* FBStrings.swift */,
 				B6BE78BF26B62A1100A01E9A /* Colors.swift */,
 			);
 			path = Values;
@@ -518,6 +521,7 @@
 				B6BE78BB26B6285D00A01E9A /* Strings.swift in Sources */,
 				B69E2C8E2675C7ED00B0BAE2 /* GotNextApp.swift in Sources */,
 				B671E5C7267990FC0042CCE6 /* GroupEventView.swift in Sources */,
+				B6BE7A1726D4454E00A01E9A /* FBStrings.swift in Sources */,
 				B671E5AD267984130042CCE6 /* EmptyView.swift in Sources */,
 				B671E5A826797F640042CCE6 /* EventView.swift in Sources */,
 				B671E5BA26798C450042CCE6 /* Values.swift in Sources */,
