@@ -12,6 +12,10 @@ struct EventView: View {
         case imageSideLength = 48
     }
     
+    let date: String
+    let location: String
+    let description: String
+    
     var body: some View {
         HStack () {
             Image(systemName: "map")
@@ -20,12 +24,15 @@ struct EventView: View {
                 .padding(Spacings.medium.rawValue)
             
             VStack(alignment: .leading) {
-                Text("Saturday, Sep 25th @ 12:37 PM")
-                    .lineLimit(1)
-                Text("Fictional Central Park")
-                    .lineLimit(1)
-                Text("Descriptions for the event which may run multiple lines")
-                    .lineLimit(1)
+                Text(date)
+                    .font(.system(size: Fonts.header.rawValue, weight: .regular, design: .serif))
+                    .lineLimit(2)
+                Text(location)
+                    .font(.system(size: Fonts.header.rawValue, weight: .medium, design: .serif))
+                    .lineLimit(2)
+                Text(description)
+                    .font(.system(size: Fonts.header.rawValue, weight: .regular, design: .serif))
+                    .lineLimit(3)
             }
             
             Spacer()
@@ -39,6 +46,6 @@ struct EventView: View {
 
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        EventView()
+        EventView(date: "Today", location: "My House", description: "Fun")
     }
 }
