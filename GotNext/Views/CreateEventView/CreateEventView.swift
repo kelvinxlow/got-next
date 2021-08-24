@@ -18,7 +18,7 @@ struct CreateEventView: View {
     let db = Firestore.firestore()
     
     @Binding public var presentedAsModule: Bool
-    @State private var date: String = ""
+    @State private var date: Date = Date()
     @State private var location: String = ""
     @State private var description: String = ""
     @State private var numPeople: Float = 1
@@ -37,13 +37,9 @@ struct CreateEventView: View {
                     .font(.system(size: Fonts.subTitle.rawValue, weight: .medium, design: .serif))
                     .foregroundColor(Color(Colors.featurePurple))
                 
-                TextField(Strings.dateTime,
-                          text: $date)
-                    .autocapitalization(.none)
-                    .padding(Spacings.extraSmall.rawValue)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .background(Color(Colors.backgroundPurple))
-                
+                DatePicker(selection: $date, in: Date()..., displayedComponents: [.hourAndMinute, .date]) {
+                }.foregroundColor(Color(Colors.featurePurple))
+                .datePickerStyle(WheelDatePickerStyle())
                 
                 Text(Strings.location)
                     .font(.system(size: Fonts.subTitle.rawValue, weight: .medium, design: .serif))
@@ -121,9 +117,17 @@ struct CreateEventView: View {
     }
     
     private func uploadEventToFirebase() {
-        if date != "", location != "", description != "", let sender = Auth.auth().currentUser?.email {
+        if location != "", description != "", let sender = Auth.auth().currentUser?.email {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .full
+            dateFormatter.timeStyle = .short
+            
+            let stringDate = dateFormatter.string(from: date)
+            let timeSince1970 = date.timeIntervalSince1970
+            
             db.collection(FBStrings.events).addDocument(data:
-                                                            [FBStrings.date : date,
+                                                            [FBStrings.date : stringDate,
+                                                             FBStrings.timeSince1970: timeSince1970,
                                                              FBStrings.location: location,
                                                              FBStrings.description: description,
                                                              FBStrings.numberOfPeople: Int(numPeople),
@@ -151,7 +155,7 @@ struct CreateEventView: View {
     }
     
     private func resetValues() {
-        date = ""
+        date = Date()
         location = ""
         description = ""
         numPeople = 1
