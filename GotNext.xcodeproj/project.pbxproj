@@ -30,6 +30,7 @@
 		B6BE7A0926D3526F00A01E9A /* CreateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE7A0826D3526F00A01E9A /* CreateEventView.swift */; };
 		B6BE7A1726D4454E00A01E9A /* FBStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE7A1626D4454E00A01E9A /* FBStrings.swift */; };
 		B6BE7A2226D544EA00A01E9A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE7A2126D544E800A01E9A /* Event.swift */; };
+		B6BE7A2A26D57A3600A01E9A /* GroupEventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BE7A2926D57A3600A01E9A /* GroupEventDetailsView.swift */; };
 		D567E059BCE6173C2546FE4A /* Pods_GotNextTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D0D72513C6B8AC070CB4BA /* Pods_GotNextTests.framework */; };
 		F0D38DA1C4FEFFA4F270435A /* Pods_GotNext_GotNextUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A38472DEC4971A32D3F7EB /* Pods_GotNext_GotNextUITests.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		B6BE7A0826D3526F00A01E9A /* CreateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventView.swift; sourceTree = "<group>"; };
 		B6BE7A1626D4454E00A01E9A /* FBStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBStrings.swift; sourceTree = "<group>"; };
 		B6BE7A2126D544E800A01E9A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B6BE7A2926D57A3600A01E9A /* GroupEventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEventDetailsView.swift; sourceTree = "<group>"; };
 		C4BA1C42C656E09D70BC4C55 /* Pods-GotNextTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotNextTests.release.xcconfig"; path = "Target Support Files/Pods-GotNextTests/Pods-GotNextTests.release.xcconfig"; sourceTree = "<group>"; };
 		F25474284006BBDE218CB37F /* Pods-GotNext.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotNext.release.xcconfig"; path = "Target Support Files/Pods-GotNext/Pods-GotNext.release.xcconfig"; sourceTree = "<group>"; };
 		F530D39F78AC40628A070399 /* Pods-GotNext.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GotNext.debug.xcconfig"; path = "Target Support Files/Pods-GotNext/Pods-GotNext.debug.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				B671E5C6267990FC0042CCE6 /* GroupEventView.swift */,
 				B671E5CE267AD22F0042CCE6 /* GroupMembersView.swift */,
 				B671E5D3267ADAA20042CCE6 /* MapView.swift */,
+				B6BE7A2926D57A3600A01E9A /* GroupEventDetailsView.swift */,
 			);
 			path = GroupEventView;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				B69E2C902675C7ED00B0BAE2 /* ContentView.swift in Sources */,
 				B6BE7A2226D544EA00A01E9A /* Event.swift in Sources */,
 				B671E5E3267D706F0042CCE6 /* LoginView.swift in Sources */,
+				B6BE7A2A26D57A3600A01E9A /* GroupEventDetailsView.swift in Sources */,
 				B6BE78BB26B6285D00A01E9A /* Strings.swift in Sources */,
 				B69E2C8E2675C7ED00B0BAE2 /* GotNextApp.swift in Sources */,
 				B671E5C7267990FC0042CCE6 /* GroupEventView.swift in Sources */,
