@@ -16,7 +16,8 @@ struct HomeView: View {
     let db = Firestore.firestore()
     
     @State private var errorRetrievingEvents = false
-    @State private var presentingModule = false
+    @State private var presentingCreateEvent = false
+    @State private var presentingEventDetails = false
     @State private var events: [Event] = []
     @State private var reversedEvents: [Event] = []
      
@@ -55,7 +56,7 @@ struct HomeView: View {
                         LazyVStack {
                             ForEach(events) {
                                 if $0.timeSince1970 > Date().timeIntervalSince1970 {
-                                    EventView(date: $0.date, location: $0.location, description: $0.description)
+                                    EventView(event: $0)
                                 }
                             }
                         }
@@ -74,30 +75,30 @@ struct HomeView: View {
             }.padding(.top, Spacings.medium.rawValue)
             
             // add something that shows events when they are available
-            if (true) {
+            if errorRetrievingEvents {
+                EmptyView()
+                Spacer()
+            } else {
                 ScrollView {
                     LazyVStack {
                         ForEach(reversedEvents) {
                             if $0.timeSince1970 <= Date().timeIntervalSince1970 {
-                                EventView(date: $0.date, location: $0.location, description: $0.description)
+                                EventView(event: $0)
                             }
                         }
                     }
                 }.padding(Spacings.medium.rawValue)
-            } else {
-                EmptyView()
-                Spacer()
             }
             
             Divider()
             HStack() {
-                Button(action: { self.presentingModule = true } ) {
+                Button(action: { self.presentingCreateEvent = true } ) {
                     Image(systemName: "plus.circle")
                             .resizable()
                             .frame(width: Sizes.imageSideLength.rawValue, height: Sizes.imageSideLength.rawValue)
                             .foregroundColor(Color(Colors.featurePurple))
-                }.sheet(isPresented: $presentingModule, content: {
-                    CreateEventView(presentedAsModule: self.$presentingModule)
+                }.fullScreenCover(isPresented: $presentingCreateEvent, content: {
+                    CreateEventView(presentedAsModule: self.$presentingCreateEvent)
                 })
                 
                 Spacer()
@@ -130,14 +131,15 @@ struct HomeView: View {
                     if let eventDocuments = querySnapshot?.documents {
                         for event in eventDocuments {
                             let data = event.data()
-                            if let date = data[FBStrings.date] as? String,
+                            if let name = data[FBStrings.name] as? String,
+                               let date = data[FBStrings.date] as? String,
                                let timeSince1970 = data[FBStrings.timeSince1970] as? Double,
                                let location = data[FBStrings.location] as? String,
                                let description = data[FBStrings.description] as? String,
                                let numberOfPeople = data[FBStrings.numberOfPeople] as? Int,
                                let sender = data[FBStrings.sender] as? String {
                                 
-                                let newEvent = Event(date: date, timeSince1970: timeSince1970, location: location, description: description, numberOfPeople: numberOfPeople, sender: sender)
+                                let newEvent = Event(name: name, date: date, timeSince1970: timeSince1970, location: location, description: description, numberOfPeople: numberOfPeople, sender: sender)
                                 
                                 self.events.append(newEvent)
                             }

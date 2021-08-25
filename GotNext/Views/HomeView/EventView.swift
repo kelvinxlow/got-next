@@ -12,9 +12,9 @@ struct EventView: View {
         case imageSideLength = 48
     }
     
-    let date: String
-    let location: String
-    let description: String
+    @State private var presentingEventDetails = false
+
+    let event: Event
     
     var body: some View {
         HStack () {
@@ -24,15 +24,15 @@ struct EventView: View {
                 .padding(Spacings.medium.rawValue)
             
             VStack(alignment: .leading) {
-                Text(date)
+                Text(event.name)
+                    .font(.system(size: Fonts.header.rawValue, weight: .bold, design: .serif))
+                    .lineLimit(1)
+                Text(event.date)
                     .font(.system(size: Fonts.header.rawValue, weight: .regular, design: .serif))
-                    .lineLimit(2)
-                Text(location)
-                    .font(.system(size: Fonts.header.rawValue, weight: .medium, design: .serif))
-                    .lineLimit(2)
-                Text(description)
+                    .lineLimit(1)
+                Text(event.location)
                     .font(.system(size: Fonts.header.rawValue, weight: .regular, design: .serif))
-                    .lineLimit(3)
+                    .lineLimit(1)
             }
             
             Spacer()
@@ -41,11 +41,15 @@ struct EventView: View {
         .background(Color(Colors.backgroundPurple))
         .cornerRadius(Values.cornerRadius.rawValue)
         .padding(.bottom, Spacings.small.rawValue)
+        .gesture(TapGesture().onEnded({ self.presentingEventDetails = true }))
+        .sheet(isPresented: $presentingEventDetails, content: {
+            GroupEventDetailsView(presentedAsModule: self.$presentingEventDetails, event: event)
+        })
     }
 }
 
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        EventView(date: "Today", location: "My House", description: "Fun")
+        EventView(event: Event(name: "Fake Event", date: "Wednesday, September 30, 2030 at 12:00 PM", timeSince1970: 12345667.0, location: "Mock Location", description: "Fake event so please don't actually show up", numberOfPeople: 20, sender: "mockemail@gmail.com"))
     }
 }

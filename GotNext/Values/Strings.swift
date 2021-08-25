@@ -38,10 +38,11 @@ public class Strings {
     
     // CreateEventView
     static let createEvent = "Create Event"
+    static let name = "Name"
     static let date = "Date"
     static let dateTime = "Date @ Time"
     static let location = "Location"
-    static let nameAddress = "Name / Address"
+    static let address = "Address"
     static let description = "Description"
     static let eventDetails = "Event Details"
     static let people = "People Needed"
@@ -49,4 +50,8 @@ public class Strings {
     // CreateEventView Status Messages
     static let errorMessage = "There was an error saving your event, please make sure all fields are filled"
     static let successMessage = "Your event was successfully saved!"
+    
+    // GroupEventDetailsView
+    static let details = "Details"
+    static let peopleNeeded = "People Needed"
 }

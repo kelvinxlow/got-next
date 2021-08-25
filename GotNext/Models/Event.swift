@@ -10,6 +10,7 @@ import Foundation
 struct Event: Identifiable {
     var id = UUID()
     
+    var name: String
     var date: String
     var timeSince1970: Double
     var location: String
