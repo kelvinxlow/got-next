@@ -12,6 +12,7 @@ struct LoginView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var homeView: Bool = false
+    @State private var usernameView: Bool = false
     @State private var errorCreatingAccount: Bool = false
     @State private var errorLoggingIn: Bool = false
     @State private var errorResettingPassword: Bool = false
@@ -20,6 +21,8 @@ struct LoginView: View {
     var body: some View {
         if homeView {
             HomeView()
+        } else if usernameView {
+            UsernameView()
         }
         else {
             ZStack() {
@@ -44,14 +47,14 @@ struct LoginView: View {
                     // MARK: Sign-in Stack
                     VStack(alignment: .leading, spacing: Spacings.large.rawValue) {
                         HStack() {
-                            Text("\(Strings.username): ")
+                            Text("\(Strings.email): ")
                                 .font(.system(size: Fonts.subTitle.rawValue, weight: .medium, design: .serif))
                                 .foregroundColor(Color.white)
                             
                             Spacer()
                             
                             TextField(
-                                " \(Strings.email)",
+                                " \(Strings.emailAddress)",
                                 text: $username
                             )
                             .autocapitalization(.none)
@@ -157,7 +160,7 @@ struct LoginView: View {
             if error != nil {
                 errorCreatingAccount = true
             } else {
-                homeView = true
+                usernameView = true
             }
         }
     }

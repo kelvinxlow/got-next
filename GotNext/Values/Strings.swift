@@ -23,7 +23,8 @@ public class Strings {
     // LoginView 
     static let signIn = "Sign In"
     static let username = "Username"
-    static let email = "Email Address"
+    static let email = "Email"
+    static let emailAddress = "Email Address"
     static let password = "Password"
     static let signInButton = "Let's Roll"
     static let newAccount = "Create new account"
@@ -54,4 +55,32 @@ public class Strings {
     // GroupEventDetailsView
     static let details = "Details"
     static let peopleNeeded = "People Needed"
+    
+    // UsernameView
+    static let userViewMessage = "Welcome to Got Next, please pick a user name to continue"
+    static let continueText = "Continue"
+    static let setName = "Set name"
+    static let usernameErrorMessage = "There was an error setting your username please try again"
+    static let noUsername = "Please enter a username"
+    static let usernameSuccessMessage = "Username set! Click continue to proceed to Got Next"
+    
+    // ProfileView
+    static let noUsernameFound = "No Username Found"
+    static let updateUsername = "Update Username"
+    static let newUsername = "New username"
+    static let updateName = "Update Name"
+    static let emailError = "Fatal error no email found"
+    static let changePassword = "Change Password"
+    static let oldPassword = "Old password"
+    static let newPassword = "New password"
+    static let setPassword = "Set Password"
+    
+    // ProfileView Status Messages
+    static let usernameUpdated = "Username updated!"
+    static let usernameUpdateErrorMessage = "There was an error updating your username please try again"
+    static let oldPasswordIncorrect = "Old password incorrect"
+    static let unexpectedError = "An unexpected error has occured, please try again later"
+    static let passwordUpdateErrorMessage = "There was an error updating your password"
+    static let passwordUpdated = "Your password was successfully updated"
+    
 }
