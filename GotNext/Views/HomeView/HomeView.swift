@@ -18,6 +18,7 @@ struct HomeView: View {
     @State private var errorRetrievingEvents = false
     @State private var presentingCreateEvent = false
     @State private var presentingEventDetails = false
+    @State private var presentingProfile = false
     @State private var events: [Event] = []
     @State private var reversedEvents: [Event] = []
      
@@ -27,16 +28,22 @@ struct HomeView: View {
                 Text(Strings.appName.capitalized)
                     .font(.system(size: Fonts.title.rawValue, weight: .bold, design: .serif))
                     .foregroundColor(.black)
+                
                 Spacer()
-                Image(systemName: "person.crop.circle")
-                    .resizable()
-                    .frame(width: Sizes.imageSideLength.rawValue, height: Sizes.imageSideLength.rawValue)
-                    .foregroundColor(Color(Colors.featurePurple))
+                
+                Button(action: { self.presentingProfile = true } ) {
+                    Image(systemName: "person.crop.circle")
+                        .resizable()
+                        .frame(width: Sizes.imageSideLength.rawValue, height: Sizes.imageSideLength.rawValue)
+                        .foregroundColor(Color(Colors.featurePurple))
+                }.fullScreenCover(isPresented: $presentingProfile, content: {
+                    ProfileView(presentedAsModule: self.$presentingProfile)
+                })
             }.padding(.bottom, Spacings.small.rawValue)
             
             Divider()
             
-            // add condition to hide if no active events
+            // add condition to hide if no upcoming events
             if (true) {
                 HStack() {
                     Image(systemName: "circle.fill")
