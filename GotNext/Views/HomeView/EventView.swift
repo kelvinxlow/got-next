@@ -50,6 +50,6 @@ struct EventView: View {
 
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        EventView(event: Event(name: "Fake Event", date: "Wednesday, September 30, 2030 at 12:00 PM", timeSince1970: 12345667.0, location: "Mock Location", description: "Fake event so please don't actually show up", numberOfPeople: 20, sender: "mockemail@gmail.com", participants: ["mockemail@gmail.com", "mockemailtwo@gmail.com"], identifier: UUID().uuidString))
+        EventView(event: MockEvent.mockEvent)
     }
 }

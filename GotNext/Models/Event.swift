@@ -19,4 +19,5 @@ struct Event: Identifiable {
     var sender: String
     var participants: [String]
     var identifier: String
+    var host: String 
 }
