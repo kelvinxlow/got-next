@@ -55,6 +55,19 @@ public class Strings {
     // GroupEventDetailsView
     static let details = "Details"
     static let peopleNeeded = "People Needed"
+    static let peopleAttending = "People Attending"
+    static let eventEnded = "This event has ended"
+    static let takeDown = "Take down event?"
+    static let delete = "Delete"
+    static let deleteEvent = "Delete event (This cannot be undone)"
+    static let alreadyAttending = "You are already signed up for this event"
+    static let withdraw = "Withdraw"
+    static let signUp = "Sign up now!"
+    static let attendingEvent = "I'm coming to this event"
+    
+    // GroupEventDetailsView Status Messages
+    static let errorDeleting = "There was an error processing your delete request. Please try again"
+    static let errorUpdating = "There was an error updating your attendance status. Please try again"
     
     // UsernameView
     static let userViewMessage = "Welcome to Got Next, please pick a user name to continue"

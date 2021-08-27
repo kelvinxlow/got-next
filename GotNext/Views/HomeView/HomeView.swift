@@ -98,7 +98,7 @@ struct HomeView: View {
             }
             
             Divider()
-            HStack() {
+            HStack {
                 Button(action: { self.presentingCreateEvent = true } ) {
                     Image(systemName: "plus.circle")
                             .resizable()
@@ -144,9 +144,12 @@ struct HomeView: View {
                                let location = data[FBStrings.location] as? String,
                                let description = data[FBStrings.description] as? String,
                                let numberOfPeople = data[FBStrings.numberOfPeople] as? Int,
-                               let sender = data[FBStrings.sender] as? String {
+                               let sender = data[FBStrings.sender] as? String,
+                               let participants = data[FBStrings.participants] as? [String],
+                               let identifier = data[FBStrings.identifier] as? String
+                            {
                                 
-                                let newEvent = Event(name: name, date: date, timeSince1970: timeSince1970, location: location, description: description, numberOfPeople: numberOfPeople, sender: sender)
+                                let newEvent = Event(name: name, date: date, timeSince1970: timeSince1970, location: location, description: description, numberOfPeople: numberOfPeople, sender: sender, participants: participants, identifier: identifier)
                                 
                                 self.events.append(newEvent)
                             }
