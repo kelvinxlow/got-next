@@ -17,4 +17,6 @@ struct Event: Identifiable {
     var description: String
     var numberOfPeople: Int
     var sender: String
+    var participants: [String]
+    var identifier: String
 }

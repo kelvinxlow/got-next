@@ -16,4 +16,6 @@ public class FBStrings {
     static let description = "description"
     static let numberOfPeople = "numberOfPeople"
     static let sender = "sender"
+    static let participants = "participants"
+    static let identifier = "identifier"
 }

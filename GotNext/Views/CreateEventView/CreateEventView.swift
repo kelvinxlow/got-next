@@ -138,16 +138,20 @@ struct CreateEventView: View {
             
             let stringDate = dateFormatter.string(from: date)
             let timeSince1970 = date.timeIntervalSince1970
+            let identifier = UUID().uuidString
             
-            db.collection(FBStrings.events).addDocument(data:
-                                                            [FBStrings.name: name,
-                                                             FBStrings.date: stringDate,
-                                                             FBStrings.timeSince1970: timeSince1970,
-                                                             FBStrings.location: location,
-                                                             FBStrings.description: description,
-                                                             FBStrings.numberOfPeople: Int(numPeople),
-                                                             FBStrings.sender: sender
-                                                            ]) { (error) in
+            db.collection(FBStrings.events).document(identifier).setData(
+                [FBStrings.name: name,
+                 FBStrings.date: stringDate,
+                 FBStrings.timeSince1970: timeSince1970,
+                 FBStrings.location: location,
+                 FBStrings.description: description,
+                 FBStrings.numberOfPeople: Int(numPeople),
+                 FBStrings.sender: sender,
+                 FBStrings.participants: [sender],
+                 FBStrings.identifier: identifier
+                ]) { (error) in
+                
                 if error != nil {
                     showError()
                 }
