@@ -131,7 +131,7 @@ struct CreateEventView: View {
     }
     
     private func uploadEventToFirebase() {
-        if name != "", location != "", description != "", let sender = Auth.auth().currentUser?.email {
+        if name != "", location != "", description != "", let sender = Auth.auth().currentUser?.email, let host = Auth.auth().currentUser?.displayName {
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .full
             dateFormatter.timeStyle = .short
@@ -149,7 +149,8 @@ struct CreateEventView: View {
                  FBStrings.numberOfPeople: Int(numPeople),
                  FBStrings.sender: sender,
                  FBStrings.participants: [sender],
-                 FBStrings.identifier: identifier
+                 FBStrings.identifier: identifier,
+                 FBStrings.host: host
                 ]) { (error) in
                 
                 if error != nil {

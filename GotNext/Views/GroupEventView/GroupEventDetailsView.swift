@@ -51,6 +51,18 @@ struct GroupEventDetailsView: View {
                 }
                 
                 VStack(alignment: .leading, spacing: Spacings.medium.rawValue) {
+                    Text(Strings.host)
+                        .font(.system(size: Fonts.subTitle.rawValue, weight: .medium, design: .serif))
+                        .foregroundColor(Color(Colors.featurePurple))
+                        .multilineTextAlignment(.leading)
+                    
+                    Text(event.host)
+                        .font(.system(size: Fonts.header.rawValue, weight: .medium, design: .serif))
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.leading)
+                }
+                
+                VStack(alignment: .leading, spacing: Spacings.medium.rawValue) {
                     Text(Strings.details)
                         .font(.system(size: Fonts.subTitle.rawValue, weight: .medium, design: .serif))
                         .foregroundColor(Color(Colors.featurePurple))
@@ -232,9 +244,8 @@ struct GroupEventDetailsView: View {
 
 struct GroupEventDetailsView_Previews: PreviewProvider {
     @State static private var present: Bool = true
-    static private let mockEvent = Event(name: "Fake Event", date: "Wednesday, September 30, 2030 at 12:00 PM", timeSince1970: 12345667.0, location: "Mock Location", description: "Fake event so please don't actually show up", numberOfPeople: 20, sender: "mockemail@gmail.com", participants: ["mockemail@gmail.com", "mockemailtwo@gmail.com"], identifier: UUID().uuidString)
     
     static var previews: some View {
-        GroupEventDetailsView(presentedAsModule: $present, event: mockEvent)
+        GroupEventDetailsView(presentedAsModule: $present, event: MockEvent.mockEvent)
     }
 }

@@ -54,6 +54,7 @@ public class Strings {
     
     // GroupEventDetailsView
     static let details = "Details"
+    static let host = "Host"
     static let peopleNeeded = "People Needed"
     static let peopleAttending = "People Attending"
     static let eventEnded = "This event has ended"

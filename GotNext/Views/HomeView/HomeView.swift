@@ -146,10 +146,11 @@ struct HomeView: View {
                                let numberOfPeople = data[FBStrings.numberOfPeople] as? Int,
                                let sender = data[FBStrings.sender] as? String,
                                let participants = data[FBStrings.participants] as? [String],
-                               let identifier = data[FBStrings.identifier] as? String
+                               let identifier = data[FBStrings.identifier] as? String,
+                               let host = data[FBStrings.host] as? String
                             {
                                 
-                                let newEvent = Event(name: name, date: date, timeSince1970: timeSince1970, location: location, description: description, numberOfPeople: numberOfPeople, sender: sender, participants: participants, identifier: identifier)
+                                let newEvent = Event(name: name, date: date, timeSince1970: timeSince1970, location: location, description: description, numberOfPeople: numberOfPeople, sender: sender, participants: participants, identifier: identifier, host: host)
                                 
                                 self.events.append(newEvent)
                             }
